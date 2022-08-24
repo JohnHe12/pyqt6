@@ -1,6 +1,7 @@
 THis Chapter 
 
 Building a Simple GUI
+=====================
 
 1. The QLabel Widget
     Explanation for Using QLabel
