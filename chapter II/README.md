@@ -14,7 +14,7 @@ Building a Simple GUI
 • Begin learning about widgets in PyQt and find out how to use them in your GUIs
 
 • Consider the design process for a simple GUI application
-v
+
 • Build basic GUIs with primarily the QLabel widget
 
 • See how to organize widgets in a GUI using the move() method
