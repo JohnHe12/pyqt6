@@ -38,6 +38,7 @@ such as QToolButton for selecting items in toolbars and QRadioButton for
 creating groups of buttons where only a single selection can be made.
 ___________________________________________________________________________
 
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/push_3.png)
 
 The QLineEdit Widget
 --------------------
@@ -48,3 +49,10 @@ ___________________________________________________________________________
 **Tip** if you need multiple lines for a user to enter text, 
 use the QTextEdit widget instead.
 ___________________________________________________________________________
+
+
+The QCheckBox Widget
+--------------------
+
+The **QCheckBox** widget is a selectable button that generally has two states: on and off. This makes them perfect for representing features in your GUI that can either be enabled or disabled, or for selecting from a list of options like in a survey.
+
