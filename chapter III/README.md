@@ -57,4 +57,10 @@ The QCheckBox Widget
 --------------------
 
 The **QCheckBox** widget is a selectable button that generally has two states: on and off. This makes them perfect for representing features in your GUI that can either be enabled or disabled, or for selecting from a list of options like in a survey.
-
+___________________________________________________________________________
+**Note** the checkboxes in QCheckBox are not mutually exclusive, 
+meaning you can select more than one checkbox at a time. 
+to make them mutually exclusive, add the checkboxes to a QButtonGroup object 
+or consider using QRadioButton.
+___________________________________________________________________________
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/checkBox.png)
