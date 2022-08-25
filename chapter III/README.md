@@ -39,4 +39,12 @@ creating groups of buttons where only a single selection can be made.
 ___________________________________________________________________________
 
 
+The QLineEdit Widget
+--------------------
 
+It is often necessary for a user to input a single line of text, such as a username or a password. With the **QLineEdit** widget, you can collect data from someone
+
+___________________________________________________________________________
+**Tip** if you need multiple lines for a user to enter text, 
+use the QTextEdit widget instead.
+___________________________________________________________________________
