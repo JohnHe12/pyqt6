@@ -38,7 +38,7 @@ such as QToolButton for selecting items in toolbars and QRadioButton for
 creating groups of buttons where only a single selection can be made.
 ___________________________________________________________________________
 
-![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/push_3.png)
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/image/push_3.png)
 
 The QLineEdit Widget
 --------------------
@@ -50,17 +50,39 @@ ___________________________________________________________________________
 use the QTextEdit widget instead.
 ___________________________________________________________________________
 
-![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/lineEdit.png)
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/image/lineEdit.png)
 
 
 The QCheckBox Widget
 --------------------
 
 The **QCheckBox** widget is a selectable button that generally has two states: on and off. This makes them perfect for representing features in your GUI that can either be enabled or disabled, or for selecting from a list of options like in a survey.
+
+```python
+                        after_cb.toggled.connect(self.printSelected)
+```
 ___________________________________________________________________________
 **Note** the checkboxes in QCheckBox are not mutually exclusive, 
 meaning you can select more than one checkbox at a time. 
 to make them mutually exclusive, add the checkboxes to a QButtonGroup object 
 or consider using QRadioButton.
 ___________________________________________________________________________
-![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/checkBox.png)
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/image/checkBox.png)
+
+
+## The QMessageBox Dialog
+
+When a user closes an application or saves their work, or an error occurs, they will typically see a dialog box pop up and display some sort of key information. The user can then interact with that dialog box, often by clicking a button to respond to the prompt. Dialog boxes are a very important form of **feedback**, or methods of monitoring and communicating changes back to the user.
+
+The **QMessageBox** class can be used to not only alert the user to a situation but also to decide how to handle the matter. For example, when closing a document you just modified, you might get a dialog box with buttons asking you to Save, Don’t Save, or Cancel. 
+
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/image/QMessageBox.png)
+
+There are two kinds of dialog boxes. 
+* **Modal dialogs**  :   block user interaction from the rest of the program until the dialog box is closed. 
+
+* **Modeless dialogs** : allow the user to interact with both the dialog and the rest of the application.
+                         Explanation for Using QMessageBox
+
+
+
