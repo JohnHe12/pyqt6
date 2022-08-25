@@ -50,6 +50,8 @@ ___________________________________________________________________________
 use the QTextEdit widget instead.
 ___________________________________________________________________________
 
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/lineEdit.png)
+
 
 The QCheckBox Widget
 --------------------
