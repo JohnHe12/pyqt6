@@ -31,7 +31,11 @@ The QPushButton Widget
 
 The **QPushButton** widget can be used to perform actions and make choices. When you click on the QPushButton widget, it sends out a signal that can be connected to a function
 
-
+QPushButton can be enabled or disabled using the QWidget method setEnabled()
+```python
+button.clicked.connect(self.buttonClicked)
+self.accept_button.setEnabled(False)
+```
 ___________________________________________________________________________
 **Note** there are different kinds of button classes with different usages, 
 such as QToolButton for selecting items in toolbars and QRadioButton for 
@@ -44,6 +48,28 @@ The QLineEdit Widget
 --------------------
 
 It is often necessary for a user to input a single line of text, such as a username or a password. With the **QLineEdit** widget, you can collect data from someone
+
+set information:
+```python
+self.author_edit.setPlaceholderText("Enter names as: First Last")
+```
+
+displaying a clear button when there is text in the editor field
+```python
+name_edit.setClearButtonEnabled(True)
+```
+
+hidden text:
+```python
+self.password_edit = QLineEdit(self)
+self.password_edit.setEchoMode(QLineEdit.EchoMode.Password)
+```
+
+show the passwords :
+
+```python
+self.password_edit.setEchoMode(QLineEdit.EchoMode.Normal)
+```
 
 ___________________________________________________________________________
 **Tip** if you need multiple lines for a user to enter text, 
@@ -93,6 +119,11 @@ There are two kinds of dialog boxes.
 
 ```
 the first argument is parent,second is title and third is content, last is the button
+
+```python
+QMessageBox.question()
+QMessageBox.warning()
+```
 
 
 ## Designing the Login GUI and Registration Dialog
