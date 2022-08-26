@@ -85,4 +85,47 @@ There are two kinds of dialog boxes.
                          Explanation for Using QMessageBox
 
 
+```python
+                        QMessageBox.information(self,"Author Found",
+                                            "Author found in catalogue!",
+                                            QMessageBox.StandardButton.Ok
+                                        )  
 
+```
+the first argument is parent,second is title and third is content, last is the button
+
+
+## Designing the Login GUI and Registration Dialog
+
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/image/login.png)
+
+The setEchoMode() method provided by QLineEdit is very useful for hiding text as it is being input. 
+
+hidden the passwords : 
+```python
+self.password_edit = QLineEdit(self)
+self.password_edit.setEchoMode(QLineEdit.EchoMode.Password)
+```
+
+show the passwords :
+
+```python
+self.password_edit.setEchoMode(QLineEdit.EchoMode.Normal)
+```
+
+## Using Event Handlers to Close a Window
+
+In order to change how the closeEvent() method is handled, 
+in this case, for the LoginWindow class, you will need to reimplement the closeEvent()
+An example of this is shown in Listing
+
+```python
+def closeEvent(self, event):
+
+    """Reimplement the closing event to display a
+    QMessageBox before closing."""
+```
+
+## Explanation for Creating the Registration Dialog
+
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/image/registration.png)
