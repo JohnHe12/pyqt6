@@ -57,6 +57,8 @@ self.author_edit.setPlaceholderText("Enter names as: First Last")
 displaying a clear button when there is text in the editor field
 ```python
 name_edit.setClearButtonEnabled(True)
+name_edit.textEdited.connect(self.checkUserInput)
+
 ```
 
 hidden text:
