@@ -174,3 +174,5 @@ def switchPage(self, index):
     """Slot for switching between tabs."""
     self.stacked_layout.setCurrentIndex(index)
 ```
+
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20IV/images/%E6%88%AA%E5%B1%8F2022-08-31%2022.50.48.png)
