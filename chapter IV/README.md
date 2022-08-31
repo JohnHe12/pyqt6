@@ -80,6 +80,14 @@ Widgets can also be aligned in a row or column using the alignment argument.
 **QSpinBox** creates an object that is similar to a text box but allows the user to select integer values by either typing a value into the widget or by clicking on up and down arrows. You can also edit the range of the values, set the step size when the arrow
 is clicked, set a starting value, or even add prefixes or suffixes in the box. There are classes similar to QSpinBox that provide similar functionality for different situations. 
 
+```python
+self.price_sb1 = QSpinBox()
+self.price_sb1.setRange(0, 100)
+self.price_sb1.setPrefix("$")
+self.price_sb1.valueChanged.connect(
+    self.calculateTotal)
+```
+
 **QDoubleSpinBox** is used for selecting floating-point numbers. 
 
 **QDateTimeEdit** or one of its variations is useful for selecting date and time values.
@@ -87,5 +95,82 @@ is clicked, set a starting value, or even add prefixes or suffixes in the box. T
 The **QComboBox** widget displays a drop-down list of options for the user to select when a user clicks on the widget’s arrow button. Combo boxes are handy for displaying a large amount of options in the least amount of space.
 
 ```python
+food_combo1 = QComboBox()
+food_combo1.addItems(food_list)
 self.price_sb1.valueChanged.connect(self.calculateTotal)
+```
+
+**QRegularExpression**
+```python
+reg_opt = QRegularExpression()
+        regex = QRegularExpression(
+            "\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[com]{3}\\b",
+            reg_opt.PatternOption.CaseInsensitiveOption)
+        self.email_edit.setValidator(
+            QRegularExpressionValidator(regex))
+```
+
+The ***QDateEdit*** instance’s format for visualizing a date is set with ***setDisplayFormat()***. The maximum range of the widget is set to the date the user opens the application using ***QDate.currentDate()***. QDateEdit has a convenience function, ***setCalendarPopup()***, that will allow a calendar to appear whenever the arrow in the widget is clicked. The initial date that appears in the widget is set with ***setDate()***.
+```python
+self.birthdate_edit = QDateEdit()
+        self.birthdate_edit.setDisplayFormat("MM/dd/yyyy")
+        self.birthdate_edit.setMaximumDate(
+            QDate.currentDate())
+        self.birthdate_edit.setCalendarPopup(True)
+        self.birthdate_edit.setDate(QDate.currentDate())
+```
+
+*** QRegularExpression***
+
+```python
+reg_opt = QRegularExpression()
+regex = QRegularExpression(
+    "\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[com]{3}\\b",
+    reg_opt.PatternOption.CaseInsensitiveOption)
+self.email_edit.setValidator(
+    QRegularExpressionValidator(regex))
+
+```
+
+## Adding Widgets and Layouts to QFormLayout
+
+```python
+ main_form = QFormLayout()
+        main_form.setFieldGrowthPolicy(
+            main_form.FieldGrowthPolicy.AllNonFixedFieldsGrow)
+        main_form.setFormAlignment(
+            Qt.AlignmentFlag.AlignHCenter | \
+            Qt.AlignmentFlag.AlignTop)
+        main_form.setLabelAlignment(
+            Qt.AlignmentFlag.AlignLeft)
+        main_form.addRow(header_label)
+        main_form.addRow("Name", name_h_box)
+        main_form.addRow("Gender", gender_combo)
+        main_form.addRow("Date of Birth", self.birthdate_edit)
+        main_form.addRow("Phone", self.phone_edit)
+        main_form.addRow("Email", self.email_edit)
+        main_form.addRow(QLabel("Comments or Messages"))
+        main_form.addRow(extra_info_tedit)
+        main_form.addRow(submit_h_box)
+        # Set the layout for the main window
+        self.setLayout(main_form)
+```
+
+## Explanation for QStackedLayout
+
+```python
+ # Create the stacked layout and add pages
+    self.stacked_layout = QStackedLayout()
+    self.stacked_layout.addWidget(profile_image)
+    self.stacked_layout.addWidget(pg2_container)
+    self.stacked_layout.addWidget(pg3_container)
+    # Create the main layout
+    main_v_box = QVBoxLayout()
+    main_v_box.addWidget(page_combo)
+    main_v_box.addLayout(self.stacked_layout)
+    # Set the layout for the main window
+    self.setLayout(main_v_box)
+def switchPage(self, index):
+    """Slot for switching between tabs."""
+    self.stacked_layout.setCurrentIndex(index)
 ```

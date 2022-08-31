@@ -71,8 +71,13 @@ show the passwords :
 
 ```python
 self.password_edit.setEchoMode(QLineEdit.EchoMode.Normal)
-```
 
+```
+if you want to limit the type, size, or manner in which characters can be input, then you can create an input mask by calling the setInputMask() method. The mask characters in this GUI only allow a user to input integers from 0 to 9. The end of the sequence, ;_, terminates the input mask and sets empty characters to _.
+```python
+self.phone_edit = QLineEdit()
+        self.phone_edit.setInputMask("(999) 999-9999;_")
+```
 ___________________________________________________________________________
 **Tip** if you need multiple lines for a user to enter text, 
 use the QTextEdit widget instead.
@@ -162,3 +167,6 @@ def closeEvent(self, event):
 ## Explanation for Creating the Registration Dialog
 
 ![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20III/image/registration.png)
+
+## Managing Pages with QStackedLayout
+
