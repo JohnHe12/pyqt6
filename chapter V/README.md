@@ -20,7 +20,7 @@ A menu is a list of commands that a computer program can perform presented in a 
 
 ## QMainWindow vs. QWidget
 
-![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20V/images/截屏2022-08-31 23.12.01.png)
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20V/images/%E6%88%AA%E5%B1%8F2022-08-31%2023.12.01.png)
 
 The QMainWindow class focuses on creating and managing the layout for the main window of an application. It allows you to set up a window with a status bar, a toolbar, dock widgets, or other menu features in predefined locations.
 
@@ -86,7 +86,7 @@ methods:
 ```python
 font, ok = QFontDialog.getFont()
 ```
-![]()
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20V/images/%E6%88%AA%E5%B1%8F2022-08-31%2023.45.24.png)
 
 ```python
 font, ok = QFontDialog.getFont(
@@ -101,6 +101,7 @@ color = QColorDialog.getColor()
  if color.isValid():
             self.text_field.setTextColor(color)
 ```
+![](https://github.com/JohnHe12/pyqt6/blob/main/chapter%20V/images/%E6%88%AA%E5%B1%8F2022-08-31%2023.47.09.png)
 
 ### The About QMessageBox
 
